@@ -6,7 +6,7 @@ export default async function ProjectsPage() {
   const projects = await getProjects();
   return (
     <>
-      <h1>A list of projects</h1>
+      <h1>Projects</h1>
       <ul>
         {projects.map((project: Project) => (
           <li key={project.slug}>

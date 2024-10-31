@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="flex flex-col min-h-screen">
+        <div id="app" className="flex flex-col">
         <Header />
         <main className="container mx-auto p-4 flex-1">
         {children}

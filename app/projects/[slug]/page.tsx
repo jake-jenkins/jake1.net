@@ -1,5 +1,5 @@
 import { getProject, getProjects } from "@/app/lib";
-
+import Link from "next/link";
 
 export async function generateStaticParams() {
   const projects = await getProjects()
@@ -31,6 +31,7 @@ export default async function ProjectPage({
 
   return (
     <>
+    <Link href="/projects" className="px-4 py-2 bg-slate-100 mb-4 inline-block text-sm rounded-md">All Projects</Link>
       <h1 className="text-sky-800 text-5xl">{content.frontmatter.name}</h1>
       {content.content}
       <div>
