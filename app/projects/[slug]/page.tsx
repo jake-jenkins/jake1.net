@@ -1,4 +1,12 @@
-import { getProject } from "@/app/lib";
+import { getProject, getProjects } from "@/app/lib";
+
+
+export async function generateStaticParams() {
+  const projects = await getProjects()
+  return projects.map((project) => ({
+    slug: project.slug,
+  }))
+}
 
 export async function generateMetadata({
   params,
