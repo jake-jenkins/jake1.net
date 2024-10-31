@@ -3,12 +3,12 @@ import { getProject } from "@/app/lib";
 export async function generateMetadata({
   params,
 }: {
-  params: { projectSlug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const { projectSlug } = await params;
-  const { frontmatter } = await getProject(projectSlug);
+  const slug = (await params).slug;
+  const { frontmatter } = await getProject(slug);
   return {
-    title: frontmatter.title,
+    title: frontmatter.name,
     description: frontmatter.description,
   };
 }
@@ -16,10 +16,10 @@ export async function generateMetadata({
 export default async function ProjectPage({
   params,
 }: {
-  params: { projectSlug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const { projectSlug } = await params;
-  const content = await getProject(projectSlug);
+  const slug = (await params).slug;
+  const content = await getProject(slug);
 
   return (
     <>
