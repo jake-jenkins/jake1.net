@@ -3,10 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 export async function generateStaticParams() {
-  const projects = await getProjects()
+  const projects = await getProjects();
   return projects.map((project) => ({
     slug: project.slug,
-  }))
+  }));
 }
 
 export async function generateMetadata({
@@ -32,9 +32,6 @@ export default async function ProjectPage({
 
   return (
     <>
-    <Link href="/projects" className="px-4 py-2 bg-slate-100 mb-4 inline-block text-sm rounded-md">All Projects</Link>
-      <h1 className="text-sky-800 text-5xl">{content.frontmatter.name}</h1>
-
       <div className="heroWrapper">
         {content.frontmatter.image ? (
           <Image
@@ -46,6 +43,8 @@ export default async function ProjectPage({
           />
         ) : null}
       </div>
+
+      <h1 className="text-sky-800 text-5xl mb-4">{content.frontmatter.name}</h1>
 
       {content.content}
       <div>
