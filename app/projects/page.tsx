@@ -2,6 +2,11 @@ import { getProjects } from "../lib";
 import type { Project } from "../lib";
 import Heading from "@/components/Heading";
 import Card from "@/components/Card";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects"
+}
 
 export default async function ProjectsPage() {
   const projects = await getProjects();

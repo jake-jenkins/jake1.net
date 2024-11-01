@@ -13,6 +13,7 @@ export async function getProject(name: string) {
             parseFrontmatter: true,
         },
     });
+    project.frontmatter.slug = name;
     return project;
 }
 
