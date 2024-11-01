@@ -21,7 +21,7 @@ export default function RootLayout({
       <body>
         <div id="app" className="flex flex-col">
         <Header />
-        <main className="container mx-auto p-4 flex-1">
+        <main className="container mx-auto flex-1">
         {children}
         </main>
         <Footer />

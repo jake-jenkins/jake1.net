@@ -1,4 +1,5 @@
 import { getProject, getProjects } from "@/app/lib";
+import Heading from "@/components/Heading";
 import Image from "next/image";
 
 export async function generateStaticParams() {
@@ -37,22 +38,23 @@ export default async function ProjectPage({
             priority
             src={content.frontmatter.image}
             alt={`${content.frontmatter.description} image`}
-            className="heroImage"
+            className="heroImage border-b-4 border-lime-300"
             fill
           />
         ) : null}
       </div>
+      <div className="p-4">
+        <Heading level={1}>{content.frontmatter.name}</Heading>
 
-      <h1 className="text-sky-800 text-5xl mb-4">{content.frontmatter.name}</h1>
-
-      {content.content}
-      <div>
-        <h2>Technology</h2>
-        <ul className="list-disc list-inside">
-          {content.frontmatter.tags.map((tag: string) => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
+        {content.content}
+        <div className="my-4">
+          <Heading level={2}>Technology</Heading>
+          <ul className="list-disc list-inside">
+            {content.frontmatter.tags.map((tag: string) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );

@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-    font-size: xx-large;
-    font-weight: 600;
-    margin-bottom: 16px;
-}
-
-h2 {
-    font-size: large;
-    font-weight: 600;
-    margin-bottom: 12px;
-    margin-top: 4px;
-}
-
 p {
     margin-bottom: 16px;
 }
