@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="p-2 md:h-24 bg-sky-800 flex items-center justify-center border-b-2 border-lime-300">
+    <header className="py-3 bg-sky-800 flex items-center justify-center border-b-2 border-lime-300">
       <Link href="/">
       <svg
-        className="text-white w-24 md:w-40"
+        className="text-white w-24 md:w-32"
         viewBox="901.592 440.746 106.818 40.627"
       >
         <path

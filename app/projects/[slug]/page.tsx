@@ -43,11 +43,11 @@ export default async function ProjectPage({
           />
         ) : null}
       </div>
-      <div className="p-4">
+      <div className="px-16 py-8 container mx-auto">
         <Heading level={1}>{content.frontmatter.name}</Heading>
 
         {content.content}
-        <div className="my-4">
+        <div className="mt-4 mb-8">
           <Heading level={2}>Technology</Heading>
           <ul className="list-disc list-inside">
             {content.frontmatter.tags.map((tag: string) => (

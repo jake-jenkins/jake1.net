@@ -6,7 +6,7 @@ import Heading from "@/components/Heading";
 export default async function ProjectsPage() {
   const projects = await getProjects();
   return (
-    <div className="p-4">
+    <div className="px-16 py-8 container mx-auto">
       <Heading level={1}>Projects</Heading>
       <ul>
         {projects.map((project: Project) => (

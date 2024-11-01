@@ -7,12 +7,12 @@ export default function Heading({
 }) {
   if (level === 1) {
     return (
-      <h1 className="text-sky-800 text-4xl mt-2 mb-4 font-extrabold">{children}</h1>
+      <h1 className="text-sky-800 text-3xl lg:text-5xl mt-2 mb-2 font-extrabold">{children}</h1>
     );
   }
   if (level === 2) {
     return (
-      <h2 className="text-sky-800 text-2xl mb-4 font-medium">{children}</h2>
+      <h2 className="text-sky-800 text-2xl lg:text-3xl mb-2 font-bold">{children}</h2>
     );
   }
 }
