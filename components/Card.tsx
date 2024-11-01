@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Card({ project }: { project: Project }) {
   return (
-    <Link href={`/projects/${project.slug}`} className="border-b-2 border-lime-500 bg-slate-50 shadow-md w-full mb-8">
+    <Link href={`/projects/${project.slug}`} className="border-b-2 border-lime-500 bg-white shadow-md w-full mb-8">
       <Image
       className="w-full"
         src={project.image}

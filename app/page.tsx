@@ -12,25 +12,15 @@ export default function Home() {
 
       <Heading level={2}>Production code trusted by</Heading>
       <p>Logos</p>
-      <div className="bg-slate-100 my-8">
-        <span className="text-sky-800 text-2xl lg:text-3xl mb-2 font-bold">Apps</span>
+      <div className="bg-white my-8 p-4 border-2 border-lime-500">
+        <span className="text-sky-800 text-2xl lg:text-3xl mb-2 font-bold">Featured Projects</span>
         <p>Floating projects.</p>
       </div>
 
-      <div className="bg-slate-100 mb-8">
-        <span className="text-sky-800 text-2xl lg:text-3xl mb-2 font-bold">Websites</span>
-        <p>Floating projects.</p>
-      </div>
-
-      <div className="bg-slate-100 mb-8">
-        <span className="text-sky-800 text-2xl lg:text-3xl mb-2 font-bold">Integrations</span>
-        <p>Floating projects.</p>
-      </div>
+      <Link className="bg-lime-300 px-4 py-2 inline-block text-xl mb-8" href="/projects">All Projects</Link>
 
       <Heading level={2}>Expertise</Heading>
       <p>Present a list in a super funky way.</p>
-
-      <Link href="/projects">Projects</Link>
     </div>
   );
 }

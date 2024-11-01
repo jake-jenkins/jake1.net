@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div id="app" className="flex flex-col">
+        <div id="app" className="flex flex-col bg-slate-50">
         <Header />
         <main className="flex-1">
         {children}
