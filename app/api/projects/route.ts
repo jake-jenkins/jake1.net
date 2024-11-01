@@ -4,24 +4,16 @@ import { type NextRequest } from 'next/server'
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const category = searchParams.get('category');
-  const search = searchParams.get('search');
-  const tags = searchParams.get('tags');
-  console.log(category, search, tags)
 
-  const projects = await getProjects();
+  let projects = await getProjects();
 
   if (category) {
-    const categoryProjects = projects.filter(function (pg) {
+    const filtered = projects.filter(function (pg) {
       return pg.category = category;
     });
-    return Response.json(categoryProjects);
+    projects = filtered
   }
 
-
-  if (!category && !search && !tags) {
-    return Response.json(projects)
-  }
-
-  return Response.json([])
+  return Response.json(projects)
 
 }

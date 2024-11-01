@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="h-32 bg-sky-800 flex items-center justify-center mb-4">
+    <header className="h-24 bg-sky-800 flex items-center justify-center mb-4">
       <Link href="/">
       <svg
         className="text-white"
