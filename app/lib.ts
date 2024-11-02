@@ -36,5 +36,6 @@ export type Project = {
     description: string,
     category: string,
     image: string,
-    tags: string[]
+    tags: string[],
+    created?: Date
 }
