@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="py-3 bg-indigo-700 flex items-center justify-center border-b-2 border-lime-300">
+    <header className="py-2.5 bg-indigo-600 flex items-center justify-center border-b-2 border-lime-300 fixed w-full backdrop-blur-lg z-20">
       <Link href="/">
       <svg
         className="text-white w-24 md:w-28"

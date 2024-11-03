@@ -21,7 +21,7 @@ export default function RootLayout({
       <body>
         <div id="app" className="flex flex-col bg-slate-50">
         <Header />
-        <main className="flex-1">
+        <main className="flex-1 mt-14 lg:mt-16">
         {children}
         </main>
         <Footer />
