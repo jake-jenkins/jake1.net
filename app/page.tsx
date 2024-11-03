@@ -18,8 +18,8 @@ export default async function Home() {
   return (
     <div className="px-12 py-8 container mx-auto">
       <div className="py-12">
-        <span className="text-5xl lg:text-8xl font-extrabold text-lime-500">
-          Delivering <span className="animate-pulse text-sky-700">awesome</span>
+        <span className="text-5xl lg:text-8xl font-extrabold text-indigo-600">
+          Delivering <span className="animate-pulse text-emerald-600">awesome</span>
           <br /> web experiences.
         </span>
       </div>
@@ -167,7 +167,7 @@ export default async function Home() {
       </div>
 
       <div className="my-8">
-        <span className="text-sky-800 text-2xl lg:text-3xl mb-2 font-bold">
+        <span className="text-indigo-800 text-2xl lg:text-3xl mb-2 font-bold">
           Featured Projects
         </span>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
