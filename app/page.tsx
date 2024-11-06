@@ -157,7 +157,7 @@ export default async function Home() {
 
           <div className="flex justify-center items-center h-16 py-16">
             <Image
-              src="https://jjx.lon1.cdn.digitaloceanspaces.com/portfolio/images/usw.svg"
+              src="/images/usw.svg"
               width={58}
               height={60}
               alt="University of South Wales"
