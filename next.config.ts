@@ -15,6 +15,14 @@ const nextConfig: NextConfig = {
             key: 'X-Frame-Options',
             value: 'DENY'
           },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=3571000; includeSubDomains; preload'
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(); battery=(); geolocation=(); microphone=()'
+          },
         ],
       },
     ]
