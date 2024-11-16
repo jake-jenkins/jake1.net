@@ -17,11 +17,15 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Strict-Transport-Security',
-            value: 'max-age=3571000; includeSubDomains; preload'
+            value: 'max-age=31536000; includeSubDomains; preload'
           },
           {
             key: 'Permissions-Policy',
             value: 'camera=(); battery=(); geolocation=(); microphone=()'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin'
           },
         ],
       },
