@@ -21,12 +21,20 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Permissions-Policy',
-            value: 'camera=(); battery=(); geolocation=(); microphone=()'
+            value: 'camera=(); geolocation=(); microphone=()'
           },
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
+            value: 'strict-origin-when-cross-origin'
           },
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: 'https://jake.ac'
+          },
+          {
+            key: 'Cross-Origin-Resource-Policy',
+            value: 'same-site'
+          }
         ],
       },
     ]
