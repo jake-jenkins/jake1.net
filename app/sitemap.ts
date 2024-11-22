@@ -25,6 +25,12 @@ async function buildSiteMap() {
             changeFrequency: 'weekly',
             priority: 0.8,
         },
+        {
+            url: `${baseUrl}/blog/deploy-nextjs-to-vps`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.5,
+        },
     ]
 
     projects.map((project: Project) => {
