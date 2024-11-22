@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Heading from "@/components/Heading";
-import { getProject } from "./lib";
+import { getContent } from "./lib";
 import Card from "@/components/Card";
 import CheckIcon from "@/components/CheckIcon";
 import type { Metadata } from "next";
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-  const feature1 = await getProject("gov-uk-portal");
-  const feature2 = await getProject("online-pharmacy");
-  const feature3 = await getProject("roundabout-uk-ios-and-android-mobile-app");
+  const feature1 = await getContent("projects", "gov-uk-portal");
+  const feature2 = await getContent("projects", "online-pharmacy");
+  const feature3 = await getContent("projects", "roundabout-uk-ios-and-android-mobile-app");
 
   return (
     <div className="px-12 py-8 container mx-auto">

@@ -4,9 +4,9 @@ import Heading from "@/components/Heading";
 import Image from "next/image";
 
 export async function generateStaticParams() {
-  const projects = await getContents("projects");
-  return projects.map((project) => ({
-    slug: project.slug,
+  const posts = await getContents("posts");
+  return posts.map((post) => ({
+    slug: post.slug,
   }));
 }
 
@@ -16,7 +16,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const slug = (await params).slug;
-  const { frontmatter } = await getContent("projects", slug);
+  const { frontmatter } = await getContent("posts", slug);
   return {
     title: frontmatter.name,
     description: frontmatter.description,
@@ -29,7 +29,7 @@ export default async function ProjectPage({
   params: Promise<{ slug: string }>;
 }) {
   const slug = (await params).slug;
-  const content = await getContent("projects", slug);
+  const content = await getContent("posts", slug);
 
   return (
     <>

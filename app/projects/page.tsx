@@ -1,4 +1,4 @@
-import { getProjects } from "../lib";
+import { getContents } from "../lib";
 import type { Project } from "../lib";
 import Heading from "@/components/Heading";
 import Card from "@/components/Card";
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 export default async function ProjectsPage() {
-  const projects = await getProjects();
+  const projects = await getContents("projects");
   return (
     <div className="px-12 py-8 container mx-auto">
       <Heading level={1}>Projects</Heading>
