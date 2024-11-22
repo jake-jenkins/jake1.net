@@ -1,11 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ['next-mdx-remote'],
-  output: "export",
-  images: {
-    unoptimized: true
-  }
+  transpilePackages: ['next-mdx-remote']
 };
 
 export default nextConfig;
