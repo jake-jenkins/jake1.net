@@ -37,7 +37,7 @@ export default async function ProjectPage({
         {content.frontmatter.image ? (
           <Image
             priority
-            src={content.frontmatter.image}
+            src={`/images/posts/${content.frontmatter.image}`}
             alt={`${content.frontmatter.description} image`}
             className="heroImage border-b-4 border-lime-300"
             fill
