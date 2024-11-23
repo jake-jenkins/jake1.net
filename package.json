@@ -6,15 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "proxy": "local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem"
   },
   "dependencies": {
-    "next": "^15.0.3",
-    "next-mdx-remote": "^5.0.0"
-  },
-  "overrides": {
-    "react": "19.0.0-rc-02c0e824-20241028",
-    "react-dom": "19.0.0-rc-02c0e824-20241028"
+    "@storyblok/react": "^4.0.0",
+    "local-ssl-proxy": "^2.0.5",
+    "next": "^15.0.3"
   },
   "devDependencies": {
     "@types/node": "^20",
