@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default async function Card({slug}: {slug: string}) {
   const getProject = await fetch(
-    `https://api.storyblok.com/v2/cdn/stories/${slug}?token=AivK9FnRxWkcCwuinarAWgtt`
-  );
+    `https://api.storyblok.com/v2/cdn/stories/${slug}?token=${process.env.ACCESS_TOKEN}
+  `);
   const project = await getProject.json();
 
   return (
