@@ -1,5 +1,5 @@
 export async function fetchStoryBySlug(slug) {
-  const contentVersion = "draft"
+  const contentVersion = "draft";
   const cv = new Date().getTime() / 1000;
 
   const searchParamsData = {
@@ -24,4 +24,23 @@ export async function fetchStoryBySlug(slug) {
   return {
     story: story,
   };
+}
+
+export async function getLinks(filter, limit, tag) {
+  let res = [];
+  const hasFilter = filter ? `&starts_with=${filter}` : "";
+  const hasTag = tag ? `&with_tag=${tag}` : "";
+  const hasLimit = limit ? `&per_page=${limit}` : "";
+  const getLinkCall = await fetch(
+    `https://api.storyblok.com/v2/cdn/stories?token=${process.env.ACCESS_TOKEN}&excluding_fields=body${hasFilter}${hasTag}${hasLimit}`
+  );
+  const links = await getLinkCall.json();
+  links.stories.map((link) => {
+    res.push({
+      name: link.name,
+      slug: `/${link.full_slug}`,
+      created: new Date(link.created_at),
+    });
+  });
+  return res;
 }
