@@ -5,6 +5,7 @@ import Grid from "./Grid"
 import Project from "./Project";
 import Paragraph from "./Paragraph";
 import Image from "./Image"
+import List from "./List";
 
 export const COMPONENTS = {
   page: Page,
@@ -13,5 +14,6 @@ export const COMPONENTS = {
   grid: Grid,
   project: Project,
   paragraph: Paragraph,
-  image: Image
+  image: Image,
+  list: List
 };
