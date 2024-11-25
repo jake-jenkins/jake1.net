@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default async function Card({slug}: {slug: string}) {
+export default async function Card({ slug }: { slug: string }) {
   const getProject = await fetch(
     `https://api.storyblok.com/v2/cdn/stories/${slug}?token=${process.env.ACCESS_TOKEN}
-  `);
+  `
+  );
   const project = await getProject.json();
-  console.log(project)
 
   return (
     <Link
@@ -25,7 +25,9 @@ export default async function Card({slug}: {slug: string}) {
           {project.story.name}
         </div>
         <span className="flex-1">{project.story.content.description}</span>
-        <span className="block mt-6 text-sm">{project.story.content.category}</span>
+        <span className="block mt-6 text-sm">
+          {project.story.content.category}
+        </span>
       </div>
     </Link>
   );
