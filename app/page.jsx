@@ -9,7 +9,6 @@ export const metadata = {
 };
 
 export default async function Home() {
-
   const posts = await getLinks("posts", 10, "Featured");
   const projects = await getLinks("projects", 3, "Featured");
 
@@ -34,22 +33,31 @@ export default async function Home() {
       </p>
 
       <div className="mb-8">
-      <h2 className="text-indigo-800 text-2xl lg:text-3xl mb-2 font-bold">
+        <h2 className="text-indigo-800 text-2xl lg:text-3xl mb-2 font-bold">
           Blog
         </h2>
         {posts.map((post) => (
-          <Link href={post.slug} className="mb-2 border py-2 pr-2" key={post.name}><span className="bg-white p-2 font-extrabold">{post.created.toLocaleDateString('en-gb')}</span> <span className="text-indigo-700 font-medium">{post.name}</span></Link>
+          <Link
+            href={post.slug}
+            className="my-2 bg-white border py-2 pr-4 text-indigo-700 font-medium"
+            key={post.name}
+          >
+            <span className="bg-slate-800 text-white p-2 font-bold mr-2">
+              {post.created.toLocaleDateString("en-gb")}
+            </span>{" "}
+            {post.name}
+          </Link>
         ))}
       </div>
 
-      <div className="my-8">
+      <div className="mb-2">
         <h2 className="text-indigo-800 text-2xl lg:text-3xl mb-2 font-bold">
           Featured projects
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <Card key={project.slug} slug={project.slug} />
-          ))}       
+          ))}
         </div>
       </div>
 
@@ -59,8 +67,6 @@ export default async function Home() {
       >
         All Projects
       </Link>
-
-     
 
       <div id="expertise" className="mb-8">
         <h2 className="text-indigo-800 text-2xl lg:text-3xl mb-2 font-bold">
