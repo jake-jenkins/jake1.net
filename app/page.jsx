@@ -68,68 +68,6 @@ export default async function Home() {
         All Projects
       </Link>
 
-      <div id="expertise" className="mb-8">
-        <h2 className="text-indigo-800 text-2xl lg:text-3xl mb-2 font-bold">
-          Expertise
-        </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3">
-          <ul>
-            <li>
-              <CheckIcon />
-              Front end architecture and frameworks
-            </li>
-            <li>
-              <CheckIcon />
-              NextJs
-            </li>
-            <li>
-              <CheckIcon />
-              NodeJs
-            </li>
-            <li>
-              <CheckIcon />
-              HTML, CSS and JavaScript
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <CheckIcon />
-              Web API
-            </li>
-            <li>
-              <CheckIcon />
-              Prisma and relational databases (ORM)
-            </li>
-            <li>
-              <CheckIcon />
-              Authentication
-            </li>
-            <li>
-              <CheckIcon />
-              Content management systems
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <CheckIcon />
-              Web security
-            </li>
-            <li>
-              <CheckIcon />
-              Multi-lingual support
-            </li>
-            <li>
-              <CheckIcon />
-              DevOps and deployment
-            </li>
-            <li>
-              <CheckIcon />
-              Cloud
-            </li>
-          </ul>
-        </div>
-      </div>
-
       <div id="production" className="mb-12">
         <h2 className="text-indigo-800 text-2xl lg:text-3xl mb-2 font-bold">
           Production code trusted by
@@ -203,6 +141,68 @@ export default async function Home() {
               alt="University of South Wales"
             />
           </div>
+        </div>
+      </div>
+
+      <div id="expertise" className="mb-8">
+        <h2 className="text-indigo-800 text-2xl lg:text-3xl mb-2 font-bold">
+          Expertise
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-3">
+          <ul>
+            <li>
+              <CheckIcon />
+              Front end architecture and frameworks
+            </li>
+            <li>
+              <CheckIcon />
+              NextJs
+            </li>
+            <li>
+              <CheckIcon />
+              NodeJs
+            </li>
+            <li>
+              <CheckIcon />
+              HTML, CSS and JavaScript
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <CheckIcon />
+              Web API
+            </li>
+            <li>
+              <CheckIcon />
+              Prisma and relational databases (ORM)
+            </li>
+            <li>
+              <CheckIcon />
+              Authentication
+            </li>
+            <li>
+              <CheckIcon />
+              Content management systems
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <CheckIcon />
+              Web security
+            </li>
+            <li>
+              <CheckIcon />
+              Multi-lingual support
+            </li>
+            <li>
+              <CheckIcon />
+              DevOps and deployment
+            </li>
+            <li>
+              <CheckIcon />
+              Cloud
+            </li>
+          </ul>
         </div>
       </div>
     </div>
