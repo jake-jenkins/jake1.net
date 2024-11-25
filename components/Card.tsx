@@ -6,6 +6,7 @@ export default async function Card({slug}: {slug: string}) {
     `https://api.storyblok.com/v2/cdn/stories/${slug}?token=AivK9FnRxWkcCwuinarAWgtt`
   );
   const project = await getProject.json();
+  console.log(project)
 
   return (
     <Link
@@ -23,8 +24,8 @@ export default async function Card({slug}: {slug: string}) {
         <div className="text-xl flex font-medium h-16 items-center pb-2">
           {project.story.name}
         </div>
-        <span className="flex-1">{project.story.description}</span>
-        <span className="block mt-6 text-sm">{project.story.category}</span>
+        <span className="flex-1">{project.story.content.description}</span>
+        <span className="block mt-6 text-sm">{project.story.content.category}</span>
       </div>
     </Link>
   );
