@@ -33,6 +33,15 @@ export default async function Home() {
         deliver cutting edge services.
       </p>
 
+      <div className="mb-8">
+      <h2 className="text-indigo-800 text-2xl lg:text-3xl mb-2 font-bold">
+          Blog
+        </h2>
+        {posts.map((post) => (
+          <Link href={post.slug} className="mb-2 border py-2 pr-2" key={post.name}><span className="bg-white p-2 font-extrabold">{post.created.toLocaleDateString('en-gb')}</span> <span className="text-indigo-700 font-medium">{post.name}</span></Link>
+        ))}
+      </div>
+
       <div className="my-8">
         <h2 className="text-indigo-800 text-2xl lg:text-3xl mb-2 font-bold">
           Featured projects
@@ -51,14 +60,7 @@ export default async function Home() {
         All Projects
       </Link>
 
-      <div className="mb-8">
-      <h2 className="text-indigo-800 text-2xl lg:text-3xl mb-2 font-bold">
-          Blog
-        </h2>
-        {posts.map((post) => (
-          <Link href={post.slug} className="mb-2" key={post.name}>{post.created.toLocaleDateString('en-gb')} - <span className="text-indigo-700 font-medium">{post.name}</span></Link>
-        ))}
-      </div>
+     
 
       <div id="expertise" className="mb-8">
         <h2 className="text-indigo-800 text-2xl lg:text-3xl mb-2 font-bold">

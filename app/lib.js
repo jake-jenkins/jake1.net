@@ -39,6 +39,7 @@ export async function getLinks(filter, limit, tag) {
     res.push({
       name: link.name,
       slug: `/${link.full_slug}`,
+      shortSlug: link.full_slug.split("/"),
       created: new Date(link.created_at),
     });
   });
