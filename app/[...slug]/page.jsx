@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
   const { story } = await fetchStoryBySlug(correctPath);
   return {
     title: story.name,
-    description: story.content.description,
+    description: story.content.description || "",
   };
 }
 
@@ -50,7 +50,7 @@ export default async function Page({ params }) {
     <>
       <StoryblokServerComponent blok={story.content} />
       <div className="container mx-auto px-4 py-8">
-        <TagList tags={tags} />
+        {tags.length > 0 ? <TagList tags={tags} /> : null}
       </div>
     </>
   );
