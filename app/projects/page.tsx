@@ -1,5 +1,10 @@
 import Card from "@/components/Card";
+import type { Metadata } from "next";
 import { getLinks } from "../lib";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
 
 export default async function ProjectPage() {
   const projects = await getLinks("projects");

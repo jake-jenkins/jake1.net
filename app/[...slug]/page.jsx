@@ -13,6 +13,15 @@ export async function generateStaticParams() {
   return res;
 }
 
+export async function generateMetadata({ params }) {
+  const correctPath = (await params).slug;
+  const { story } = await fetchStoryBySlug(correctPath);
+  return {
+    title: story.name,
+    description: story.content.description,
+  };
+}
+
 export default async function Page({ params }) {
   const correctPath = (await params).slug;
   const isDraftModeEnabled = process.env.IS_PREVIEW === "true";
