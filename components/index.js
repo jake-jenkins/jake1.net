@@ -6,6 +6,7 @@ import Project from "./Project";
 import Paragraph from "./Paragraph";
 import Image from "./Image"
 import List from "./List";
+import Code from "./Code";
 
 export const COMPONENTS = {
   page: Page,
@@ -15,5 +16,6 @@ export const COMPONENTS = {
   project: Project,
   paragraph: Paragraph,
   image: Image,
-  list: List
+  list: List,
+  code: Code
 };
